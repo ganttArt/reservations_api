@@ -7,7 +7,7 @@ class TableSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['id', 'description', 'capacity']
 
 
-class ReservationSerializer(serializers.HyperlinkedModelSerializer):
+class ReservationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reservation
         fields = ['id', 'table', 'date']

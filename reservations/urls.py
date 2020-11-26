@@ -8,4 +8,5 @@ router.register(r'reservation', views.ReservationViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('reservation/by_date/<str:date>/', views.reservation_by_date)
 ]
