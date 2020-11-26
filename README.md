@@ -1,5 +1,6 @@
 # reservations_api
 
+## Challenge Guidelines
 Your challenge is the following:
 Create a backend/API for the generic table reservation service.
 
