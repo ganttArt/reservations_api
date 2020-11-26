@@ -28,5 +28,4 @@ Returns all tables reserved for a given date
 http://localhost:8000/api/reservation/by_date/2020-11-27/
 
 Make a reservation with date and table name, returns error if already in system.
-requests.post('http://localhost:8000/api/reservation/',
-			  data={"table": 1, "date":"2020-11-27"})
+requests.post('http://localhost:8000/api/reservation/', data={"table": 1, "date":"2020-11-27"})
