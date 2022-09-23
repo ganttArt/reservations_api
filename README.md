@@ -1,6 +1,6 @@
 # Reservations API
 API for restaurant table reservation service.  
-Includes admin panel for moderators.  
+Includes Django Admin panel & Django REST framework interface for moderators to edit data.
 Built with Python3 & Django REST Framework.
 
 ## API Endpoints:
