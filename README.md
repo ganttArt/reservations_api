@@ -1,33 +1,22 @@
 # Reservations API
-API for generic table reservation service built in Python3/Django/Django REST Framework. 
+API for restaurant table reservation service.  
+Includes admin panel for moderators.  
+Built with Python3 & Django REST Framework.
 
-## Challenge Guidelines
-Your challenge is the following:
-Create a backend/API for the generic table reservation service.
+## API Endpoints:
 
-The API should consist of the following endpoints:</br>
-* Table list. Returns the list of “table” objects, so that client applications can render/list the tables schema
-* Tables availability for a given date. Expects a required `date` parameter and returns the information on which tables are reserved on specific date
-* Table reservation action. Expects the required parameters for specifying the date and specific table reference to make a reservation. Validation should be applied to prevent the reservation for the table that is already taken for a given date</br>
+- GET - List of all tables  
+http://localhost:8000/api/table
 
-There should also be an interface for “moderator users”, who should have the following functionality available:
-* Set up the “tables schema” by creating separate table instances with the following information:
-    *  table description (short text field)
-table capacity (the number of people allowed)
-    * See the list of the tables already created
-    * In a separate section see the list of reservations
-    * Be able to switch to the details view for specific reservation
+- GET - All tables reserved for a given date
+http://localhost:8000/api/reservation/by_date/2020-11-27
 
-## API Info
-### API Endpoints:
+- POST - Make a reservation  
+http://localhost:8000/api/reservation  
+body: `{"table": 1, "date":"2020-11-27"}`
 
-Returns list of ‘table’ ojbects.
-http://localhost:8000/api/table/
-
-Returns all tables reserved for a given date
-http://localhost:8000/api/reservation/by_date/2020-11-27/
-
-Make a reservation with date and table name, returns error if already in system.
-requests.post('http://localhost:8000/api/reservation/', data={"table": 1, "date":"2020-11-27"})
-
-### Moderator guidelines fulfilled in Django Admin
+## For Moderators to edit data
+- Django REST Framework interface  
+http://localhost:8000/api/  
+- Use Django Admin panel  
+http://localhost:8000/admin/
